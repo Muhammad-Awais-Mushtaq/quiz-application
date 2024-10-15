@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sign Up Page -->
+    <div id="signup-page" class="page">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Username">
+        <input type="password" id="signup-password" placeholder="Password">
+        <input type="email" id="signup-email" placeholder="Email">
+        <button onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page" style="display:none;">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showSignupPage()">Sign Up</a></p>
+    </div>
+
+    <!-- Subject Page (Dashboard) -->
+    <div id="subject-page" class="page" style="display:none;">
+        <h1>Welcome to the Subjects</h1>
+        <button onclick="loadQuizzes('PPSD')">PPSD</button>
+        <button onclick="loadQuizzes('AI')">AI</button>
+        <button onclick="loadQuizzes('SE')">SE</button>
+        <button onclick="loadQuizzes('WT')">WT</button>
+        <button onclick="loadQuizzes('IS')">IS</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="page" style="display:none;">
+        <h1 id="quiz-title"></h1>
+        <div id="student-info">
+            <input type="text" id="student-name" placeholder="Enter Your Name">
+            <input type="text" id="roll-number" placeholder="Enter Roll Number">
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="quiz-content" style="display:none;">
+            <div id="quiz-options"></div>
+            <button id="submit-quiz" style="display:none;">Submit Quiz</button>
+            <div id="quiz-results"></div>
+            <button id="back-to-subjects" style="display:none;" onclick="goBackToSubjects()">Back to Subjects</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

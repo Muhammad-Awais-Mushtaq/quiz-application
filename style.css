@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.page {
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h1, h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+#quiz-options {
+    margin-top: 25px;
+}
+
+#quiz-options div {
+    margin-bottom: 15px;
+}
+
+#quiz-results {
+    margin-top: 25px;
+}
+
+.correct-answer {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong-answer {
+    color: red;
+    font-weight: bold;
+}
+
+#back-to-subjects {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-subjects:hover {
+    background-color: #218838;
+}
+
+#back-to-subjects:active {
+    transform: scale(0.98);
+}
